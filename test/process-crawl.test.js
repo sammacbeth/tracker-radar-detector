@@ -6,6 +6,12 @@ const crawl = require('../src/trackers/classes/crawl.js')
 
 const mockSiteData = require('./fixtures/example.com.json')
 
+function assertObjectPartial(actual, expected) {
+    Object.keys(expected).forEach((prop) => {
+        assert.deepStrictEqual(actual[prop], expected[prop], `${prop}: ${actual[prop]} should equal ${expected[prop]}`)
+    })
+}
+
 describe('Process Crawl', () => {
 
     let site
@@ -60,6 +66,7 @@ describe('Process Crawl', () => {
 
         it('extracts domain cookies', () => {
             assert.deepStrictEqual(crawl.domainCookies, {
+                'google-analytics.com': 1,
                 'tracker.com': 1,
             })
         })
@@ -67,7 +74,12 @@ describe('Process Crawl', () => {
         it('extracts common requests', () => {
             // test some aspects of common request data
             assert.strictEqual(crawl.commonRequests['google-analytics.com/analytics.js - Script'].apis['Navigator.prototype.userAgent'], 1)
-            assert.notDeepStrictEqual(crawl.commonRequests["tracker.com/collect - XHR"], {
+            assertObjectPartial(crawl.commonRequests['google-analytics.com/analytics.js - Script'], {
+                cookies: 0,
+                cookiesOn: 1,
+            })
+    
+            assertObjectPartial(crawl.commonRequests["tracker.com/collect - XHR"], {
                 apis: {},
                 cnames: [],
                 cookies: 0, // why is this 0? This request set a cookie

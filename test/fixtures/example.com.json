@@ -16,7 +16,8 @@
           "Navigator.prototype.javaEnabled": 1,
           "Navigator.prototype.language": 1,
           "Date.prototype.getTime": 14,
-          "Navigator.prototype.userAgent": 2
+          "Navigator.prototype.userAgent": 2,
+          "Document.cookie setter": 1
         }
       },
       "savedCalls": []
