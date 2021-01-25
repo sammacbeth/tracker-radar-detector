@@ -70,12 +70,10 @@ describe('Process Crawl', () => {
             assert.notDeepStrictEqual(crawl.commonRequests["tracker.com/collect - XHR"], {
                 apis: {},
                 cnames: [],
-                cookies: 0,
+                cookies: 0, // why is this 0? This request set a cookie
                 cookiesOn: 1,
                 fpAvg: 0,
-                fpPerSite: [
-                    0
-                ],
+                fpPerSite: [0],
                 fpStd: 0,
                 host: "tracker.com",
                 pages: new Set(['example.com']),
