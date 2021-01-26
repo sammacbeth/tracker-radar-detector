@@ -20,33 +20,41 @@
           "Document.cookie setter": 1
         }
       },
-      "savedCalls": []
+      "savedCalls": [
+        {
+          "source": "https://www.google-analytics.com/analytics.js",
+          "description": "Document.cookie setter",
+          "arguments": [
+            "_ga=GA1.2.2073038129.1608010879; path=/; expires=Thu, 15 Dec 2022 05:41:27 GMT; domain=example.com;"
+          ]
+        }
+      ]
     },
     "cookies": [
       {
         "name": "_ga",
-        "domain": ".mozilla.org",
+        "domain": ".example.com",
         "path": "/",
         "expires": 1671041478000,
         "session": false
       },
       {
         "name": "_gid",
-        "domain": ".mozilla.org",
+        "domain": ".example.com",
         "path": "/",
         "expires": 1608055878000,
         "session": false
       },
       {
         "name": "_gat",
-        "domain": ".mozilla.org",
+        "domain": ".example.com",
         "path": "/",
         "expires": 1607969538000,
         "session": false
       },
       {
         "name": "multidb_pin_writes",
-        "domain": "addons.mozilla.org",
+        "domain": "test.example.com",
         "path": "/",
         "expires": 1607969495363,
         "session": false
@@ -66,19 +74,19 @@
         },
         "responseBodyHash": "e441c3e2771625ba05630ab464275136a82c99650ee2145ca5aa9853bedeb01b",
         "initiators": [
-          "https://addons.mozilla.org/en-US/firefox/"
+          "https://test.example.com/en-US/firefox/"
         ],
         "time": 0.016581999137997627
       },
       {
-        "url": "https://www.google-analytics.com/j/collect?v=1&_v=j87&a=2019442565&t=pageview&_s=1&dl=https%3A%2F%2Faddons.mozilla.org%2Fen-US%2Ffirefox%2F&ul=en-us&de=UTF-8&dt=Add-ons%20for%20Firefox%20(en-US)&sd=24-bit&sr=800x600&vp=1440x812&je=0&_u=aEBAAEABEAAAAC~&jid=2093765751&gjid=174860062&cid=267908487.1607969479&tid=UA-36116321-7&_gid=897228099.1607969479&_r=1&z=1943713086",
+        "url": "https://www.google-analytics.com/j/collect?v=1&_v=j87&a=2019442565&t=pageview&_s=1&dl=https%3A%2F%2Ftest.example.com%2Fen-US%2Ffirefox%2F&ul=en-us&de=UTF-8&dt=Add-ons%20for%20Firefox%20(en-US)&sd=24-bit&sr=800x600&vp=1440x812&je=0&_u=aEBAAEABEAAAAC~&jid=2093765751&gjid=174860062&cid=267908487.1607969479&tid=UA-36116321-7&_gid=897228099.1607969479&_r=1&z=1943713086",
         "method": "POST",
         "type": "XHR",
         "status": 200,
         "size": 208,
         "remoteIPAddress": "172.217.13.78",
         "responseHeaders": {
-          "access-control-allow-origin": "https://addons.mozilla.org",
+          "access-control-allow-origin": "https://test.example.com",
           "cache-control": "no-cache, no-store, must-revalidate",
           "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
           "pragma": "no-cache"
@@ -86,7 +94,6 @@
         "responseBodyHash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
         "initiators": [
           "https://www.google-analytics.com/analytics.js",
-          "https://addons-amo.cdn.mozilla.net/amo-ab0170dd747e8bf3eb1a.js"
         ],
         "time": 0.011511998251080513
       },
@@ -98,7 +105,7 @@
         "size": 424,
         "remoteIPAddress": "172.217.13.78",
         "responseHeaders": {
-          "access-control-allow-origin": "https://addons.mozilla.org",
+          "access-control-allow-origin": "https://test.example.com",
           "cache-control": "no-cache, no-store, must-revalidate",
           "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
           "pragma": "no-cache"
@@ -106,7 +113,6 @@
         "responseBodyHash": "8337212354871836e6763a41e615916c89bac5b3f1f0adf60ba43c7c806e1015",
         "initiators": [
           "https://www.google-analytics.com/analytics.js",
-          "https://addons-amo.cdn.mozilla.net/amo-ab0170dd747e8bf3eb1a.js"
         ],
         "time": 0.01307000033557415
       },
@@ -118,7 +124,7 @@
         "size": 58,
         "remoteIPAddress": "172.217.13.78",
         "responseHeaders": {
-          "access-control-allow-origin": "https://addons.mozilla.org",
+          "access-control-allow-origin": "https://test.example.com",
           "cache-control": "no-cache, no-store, must-revalidate",
           "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
           "pragma": "no-cache"
@@ -126,7 +132,6 @@
         "responseBodyHash": "8337212354871836e6763a41e615916c89bac5b3f1f0adf60ba43c7c806e1015",
         "initiators": [
           "https://www.google-analytics.com/analytics.js",
-          "https://addons-amo.cdn.mozilla.net/amo-ab0170dd747e8bf3eb1a.js"
         ],
         "time": 0.013325000181794167
       },
@@ -138,7 +143,7 @@
         "size": 58,
         "remoteIPAddress": "172.217.13.78",
         "responseHeaders": {
-          "access-control-allow-origin": "https://addons.mozilla.org",
+          "access-control-allow-origin": "https://test.example.com",
           "cache-control": "no-cache, no-store, must-revalidate",
           "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
           "pragma": "no-cache"
@@ -146,7 +151,6 @@
         "responseBodyHash": "8337212354871836e6763a41e615916c89bac5b3f1f0adf60ba43c7c806e1015",
         "initiators": [
           "https://www.google-analytics.com/analytics.js",
-          "https://addons-amo.cdn.mozilla.net/amo-ab0170dd747e8bf3eb1a.js"
         ],
         "time": 0.015500999987125397
       },
@@ -158,7 +162,7 @@
         "size": 58,
         "remoteIPAddress": "172.217.13.78",
         "responseHeaders": {
-          "access-control-allow-origin": "https://addons.mozilla.org",
+          "access-control-allow-origin": "https://test.example.com",
           "cache-control": "no-cache, no-store, must-revalidate",
           "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
           "pragma": "no-cache"
@@ -166,7 +170,6 @@
         "responseBodyHash": "8337212354871836e6763a41e615916c89bac5b3f1f0adf60ba43c7c806e1015",
         "initiators": [
           "https://www.google-analytics.com/analytics.js",
-          "https://addons-amo.cdn.mozilla.net/amo-ab0170dd747e8bf3eb1a.js"
         ],
         "time": 0.011066999286413193
       },
@@ -178,7 +181,7 @@
         "size": 58,
         "remoteIPAddress": "172.217.13.78",
         "responseHeaders": {
-          "access-control-allow-origin": "https://addons.mozilla.org",
+          "access-control-allow-origin": "https://test.example.com",
           "cache-control": "no-cache, no-store, must-revalidate",
           "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
           "pragma": "no-cache"
@@ -186,7 +189,6 @@
         "responseBodyHash": "8337212354871836e6763a41e615916c89bac5b3f1f0adf60ba43c7c806e1015",
         "initiators": [
           "https://www.google-analytics.com/analytics.js",
-          "https://addons-amo.cdn.mozilla.net/amo-ab0170dd747e8bf3eb1a.js"
         ],
         "time": 0.010642999783158302
       },
@@ -198,7 +200,7 @@
         "size": 58,
         "remoteIPAddress": "172.217.13.78",
         "responseHeaders": {
-          "access-control-allow-origin": "https://addons.mozilla.org",
+          "access-control-allow-origin": "https://test.example.com",
           "cache-control": "no-cache, no-store, must-revalidate",
           "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
           "pragma": "no-cache"
@@ -206,7 +208,6 @@
         "responseBodyHash": "8337212354871836e6763a41e615916c89bac5b3f1f0adf60ba43c7c806e1015",
         "initiators": [
           "https://www.google-analytics.com/analytics.js",
-          "https://addons-amo.cdn.mozilla.net/amo-ab0170dd747e8bf3eb1a.js"
         ],
         "time": 0.01091800071299076
       },
