@@ -7,7 +7,7 @@ const crawl = require('../src/trackers/classes/crawl.js')
 const mockSiteData = require('./fixtures/example.com.json')
 
 function assertObjectPartial(actual, expected) {
-    Object.keys(expected).forEach((prop) => {
+    Object.keys(expected).forEach(prop => {
         assert.deepStrictEqual(actual[prop], expected[prop], `${prop}: ${actual[prop]} should equal ${expected[prop]}`)
     })
 }
@@ -27,6 +27,7 @@ describe('Process Crawl', () => {
             crawl.stats.requests++
         }
         crawl.processSite(site)
+        Object.values(crawl.commonRequests).forEach(req => req.finalize(1))
     })
 
     describe('site', () => {
@@ -75,17 +76,16 @@ describe('Process Crawl', () => {
             // test some aspects of common request data
             assert.strictEqual(crawl.commonRequests['google-analytics.com/analytics.js - Script'].apis['Navigator.prototype.userAgent'], 1)
             assertObjectPartial(crawl.commonRequests['google-analytics.com/analytics.js - Script'], {
-                cookies: 0,
+                cookies: 1,
                 cookiesOn: 1,
             })
     
             assertObjectPartial(crawl.commonRequests["tracker.com/collect - XHR"], {
                 apis: {},
                 cnames: [],
-                cookies: 0, // why is this 0? This request set a cookie
+                cookies: 1,
                 cookiesOn: 1,
                 fpAvg: 0,
-                fpPerSite: [0],
                 fpStd: 0,
                 host: "tracker.com",
                 pages: new Set(['example.com']),
